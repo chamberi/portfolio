@@ -1,0 +1,40 @@
+/** {
+  border: orange 1px dotted;
+}*/
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Verdana;
+  margin: 15px;
+  background-color: #D9D9FF;
+}
+
+header {
+  background-color: #CCCCCC;
+  height: 120px;
+  padding: 0 5px;
+}
+
+img {
+  max-width:100%;
+}
+
+h1 {
+  clear: both;
+  display: block;
+}
+
+h2 {
+  float:left;
+  margin: 5px;
+}
+
+h3 {
+  clear: both;
+  float:left;
+  margin: 2px;
+}
