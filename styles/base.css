@@ -38,3 +38,27 @@ h3 {
   float:left;
   margin: 2px;
 }
+
+.projects {
+  background-color: #fcf4e4;
+}
+
+.title {
+  /*clear: both;*/
+  display: block;
+}
+
+.abstract {
+  clear: both;
+  margin: 0;
+  font-size: 14px;
+}
+
+address {
+  font-size: 13px;
+}
+
+.timeCalc {
+  margin: 0;
+  font-size: 13px;
+}
