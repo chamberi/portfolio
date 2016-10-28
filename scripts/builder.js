@@ -22,7 +22,11 @@ Article.prototype.toHtml = function() {
   $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.dateStamp))/60/60/24/1000) + ' days ago');
   $newArticle.removeClass('template');
 
-  return $newArticle;
+  // return $newArticle;
+
+  var source = $('#project-template').html();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
 };
 
 /* This sort method is a standard JavaScript Array function
@@ -35,10 +39,18 @@ codeProjects.sort(function(currentObject, nextObject) {
   return (new Date(nextObject.dateStamp)) - (new Date(currentObject.dateStamp));
 });
 
-codeProjects.forEach(function(ele) {
-  articles.push(new Article(ele));
+codeProjects.forEach(function(codeProjectsObject) {
+  articles.push(new Article(codeProjectsObject));
 });
 
-articles.forEach(function(article) {
-  $('#articles').append(article.toHtml());
+articles.forEach(function(newcodeProjectsObject){
+  $('#articles').append(newcodeProjectsObject.toHtml());
 });
+
+// codeProjects.forEach(function(ele) {
+//   articles.push(new Article(ele));
+// });
+//
+// articles.forEach(function(article) {
+//   $('#articles').append(article.toHtml());
+// });
