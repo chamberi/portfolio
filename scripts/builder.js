@@ -10,17 +10,20 @@ function Article (options) {
 };
 
 Article.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-  $newArticle.attr('data-category', this.category);
-  $newArticle.find('.title').text(this.title);
-  $newArticle.find('.abstract').text(this.abstract);
-  $newArticle.find('a').text(this.coders);
-  $newArticle.find('a').attr('href', this.repoUrl);
+  // var $newArticle = $('article.template').clone();
+  // $newArticle.attr('data-category', this.category);
+  // $newArticle.find('.title').text(this.title);
+  // $newArticle.find('.abstract').text(this.abstract);
+  // $newArticle.find('a').text(this.coders);
+  // $newArticle.find('a').attr('href', this.repoUrl);
 
   // $newArticle.find('section').html(this.abstract);
-  $newArticle.find('time[pubdate]').attr('title', this.dateStamp);
-  $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.dateStamp))/60/60/24/1000) + ' days ago');
-  $newArticle.removeClass('template');
+  // $newArticle.find('time[pubdate]').attr('title', this.dateStamp);
+  // $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.dateStamp))/60/60/24/1000) + ' days ago');
+  // $newArticle.removeClass('template');
+
+  this.daysAgo = parseInt((new Date() - new Date(this.dateStamp))/60/60/24/1000);
+  this.publishStatus = this.dateStamp ? 'Posted ' + this.daysAgo + ' days ago on' : '(draft)';
 
   // return $newArticle;
 
@@ -43,8 +46,8 @@ codeProjects.forEach(function(codeProjectsObject) {
   articles.push(new Article(codeProjectsObject));
 });
 
-articles.forEach(function(newcodeProjectsObject){
-  $('#articles').append(newcodeProjectsObject.toHtml());
+articles.forEach(function(newCodeProjectsObject){
+  $('#articles').append(newCodeProjectsObject.toHtml());
 });
 
 // codeProjects.forEach(function(ele) {
