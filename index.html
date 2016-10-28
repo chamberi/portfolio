@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <script id="project-template" type="x-handlebars-template">
+      <article data-category="{{category}}">
+        <h3 class="title">{{title}}</h3>
+          <p class="abstract">{{abstract}}</p>
+          <address><a href="{{reporUrl}}">{{coders}}</a></address>
+          <p class="timeCalc"> {{publishStatus}} <time pubdate datetime="">{{dateStamp}}</time></p><br>
+      </article>
+    </script>
   </head>
   <body>
     <header>
@@ -19,6 +27,8 @@
       <nav class="main-nav">
         <div class="icon-menu"></div>
           <ul>
+            <li class="tab" data-content="articles"><a href="#"> Home</a></li>
+            <li class="tab" data-content="about"><a href="#"> About</a></li>
             <li><a href="https://www.linkedin.com/in/colinlamont" target="_blank" class"icon-linkedin"> LinkedIn</a></li>
             <li><a href="https://github.com/chamberi" target="_blank" class="icon-github"> GitHub</a></li>
             <li><a href="https://twitter.com/chamberiSeattle" target="_blank" class="icon-twitter3"> Twitter</a></li>
@@ -26,22 +36,23 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section id="about" class="tab-content">
         <article>
-          <div>
+          <div class="about">
             <h1>About Me</h1>
             <p>With over 25 years in the high-tech industry, I've conceived of, launched, and marketed B2B and B2C products and companies for most of my career. But now training to be a full-stack Javascript developer, I'm looking to build my own applications.</p>
             <img src="imgs/profile.jpg"/>
           </div>
         </article>
-        <article>
-          <ul>
-            <li><a href="https://github.com/chamberi/bus-mall" target="_blank"> Bus Mall repo</a></li>
-            <li><a href="https://github.com/chamberi/cookie-stand" target="_blank"> Cookie Stand repo</a></li>
-            <li><a href="https://github.com/abdih17/Mars-Mission" target="_blank"> Mars Mission collaborative repo</a></li>
-          <ul>
-        </article>
       </section>
+      <div id="articles" class="tab-content">
+        <h2>Javascript Projects</h2>
+      </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script type="text/javascript" src="scripts/projects.js"></script>
+    <script type="text/javascript" src="scripts/builder.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
   </body>
 </html>
