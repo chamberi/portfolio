@@ -6,6 +6,15 @@
   display: inline-block;
 }
 
+header section, header nav {
+  display: inline-block;
+
+}
+
+header section {
+  margin-top: 40px;
+}
+
 .main-nav:hover ul {
   display: block;
 }
@@ -15,23 +24,34 @@
   padding: 0;
   list-style: none;
   clear: both;
+  /*float: right;*/
+}
+
+.head-color {
+  background-color: #CCCCCC;
 }
 
 time {
-  font-size: 132px;
+  font-size: 13px;
 }
 
 @media screen and (min-width: 760px){
   .icon-menu {
     display: none;
+
   }
   .main-nav ul {
-    display:unset;
-    float:left;
+    display:block;
+    float:right;
+    margin-top: 70px;
   }
 
   .main-nav li {
     display:inline;
     margin-left: 40px;
   }
+}
+
+.project-article {
+  margin-bottom: 10px;
 }
