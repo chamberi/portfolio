@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <script id="project-template" type="x-handlebars-template">
-      <article data-category="{{category}}">
+      <article class="project-article" data-category="{{category}}">
         <h3 class="title">{{title}}</h3>
           <p class="abstract">{{abstract}}</p>
           <address><a href="{{reporUrl}}">{{coders}}</a></address>
-          <p class="timeCalc"> {{publishStatus}} <time pubdate datetime="">{{dateStamp}}</time></p><br>
+          <p class="timeCalc"> {{publishStatus}} <time pubdate datetime="">{{dateStamp}}</time></p>
       </article>
     </script>
   </head>
   <body>
-    <header>
+    <header class="head-color">
       <section>
         <h2>Colin Lamont's Portfolio</h1>
         <h3>Full Stack Javascript Developer</h2>
