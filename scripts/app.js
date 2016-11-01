@@ -1,3 +1,4 @@
+'use strict';
 var app = {};
 
 app.handleMainNav = function () {
@@ -11,4 +12,20 @@ app.handleMainNav = function () {
   // $('.main-nav .tab:first').click();
 };
 
-app.handleMainNav();
+
+app.renderIndexPage = function() {
+  Article.articles.forEach(function(a){
+    $('#articles').append(a.toHtml('project-template'));
+    // if($('#category-filter option:contains("'+ a.category + '")').length === 0) {
+    //   $('#category-filter').append(a.toHtml('#category-filter-template'));
+    // };
+    // if($('#author-filter option:contains("'+ a.author + '")').length === 0) {
+    //   $('#author-filter').append(a.toHtml('#author-filter-template'));
+    // };
+  });
+  // articleView.handleCategoryFilter();
+  // articleView.handleAuthorFilter();
+  app.handleMainNav();
+  // articleView.setTeasers();
+};
+Article.fetchAll();
