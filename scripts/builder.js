@@ -26,16 +26,13 @@ Article.loadAll = function(inputData) {
 };
 
 Article.fetchAll = function() {
-  console.log('fetchAll working');
   if (localStorage.blogArticles) {
     var storedData = JSON.parse(localStorage.blogArticles);
     Article.loadAll(storedData);
     app.renderIndexPage();
   } else {
-    console.log('About to fetch json');
     $.getJSON('data/projData.json',
       function(data, message, xhr) {
-        console.log(data);
         var projectJSON = JSON.stringify(data);
         localStorage.setItem('blogArticles', projectJSON);
         Article.loadAll(data);
@@ -43,12 +40,3 @@ Article.fetchAll = function() {
       });
   }
 };
-
-
-// codeProjects.forEach(function(codeProjectsObject) {
-//   articles.push(new Article(codeProjectsObject));
-// });
-//
-// articles.forEach(function(newCodeProjectsObject){
-//   $('#articles').append(newCodeProjectsObject.toHtml());
-// });

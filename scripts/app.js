@@ -15,17 +15,8 @@ app.handleMainNav = function () {
 
 app.renderIndexPage = function() {
   Article.articles.forEach(function(a){
-    $('#articles').append(a.toHtml('project-template'));
-    // if($('#category-filter option:contains("'+ a.category + '")').length === 0) {
-    //   $('#category-filter').append(a.toHtml('#category-filter-template'));
-    // };
-    // if($('#author-filter option:contains("'+ a.author + '")').length === 0) {
-    //   $('#author-filter').append(a.toHtml('#author-filter-template'));
-    // };
+    $('#articles').append(a.toHtml('#project-template'));
   });
-  // articleView.handleCategoryFilter();
-  // articleView.handleAuthorFilter();
   app.handleMainNav();
-  // articleView.setTeasers();
 };
 Article.fetchAll();
