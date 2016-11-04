@@ -1,3 +1,4 @@
+'use strict';
 var app = {};
 
 app.handleMainNav = function () {
@@ -11,4 +12,11 @@ app.handleMainNav = function () {
   // $('.main-nav .tab:first').click();
 };
 
-app.handleMainNav();
+
+app.renderIndexPage = function() {
+  Article.articles.forEach(function(a){
+    $('#articles').append(a.toHtml('#project-template'));
+  });
+  app.handleMainNav();
+};
+Article.fetchAll();
