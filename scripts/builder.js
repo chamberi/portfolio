@@ -1,5 +1,8 @@
 'use strict';
 
+// iife this one too
+
+// i personally don't like the word options for this but it's not a big deal.
 function Article (options) {
   for (var keys in options) {
     this[keys] = options[keys];
@@ -25,6 +28,7 @@ Article.loadAll = function(inputData) {
   });
 };
 
+// I know you don't need to, but you could include the etag check thing
 Article.fetchAll = function() {
   if (localStorage.blogArticles) {
     var storedData = JSON.parse(localStorage.blogArticles);

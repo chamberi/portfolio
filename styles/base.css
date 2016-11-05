@@ -49,6 +49,7 @@ h3 {
   margin: 2px;
 }
 
+/*I think .projects, .title, and .abstract would classify as modules...maybe, I'm not sure*/
 .projects {
   background-color: #fcf4e4;
 }
