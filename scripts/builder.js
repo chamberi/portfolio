@@ -2,7 +2,7 @@
 
 // iife this one too
 
-// i personally don't like the word options for this but it's not a big deal.
+// i personally don't like the word 'options' for this but it's not a big deal.
 function Article (options) {
   for (var keys in options) {
     this[keys] = options[keys];
