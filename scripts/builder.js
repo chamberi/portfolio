@@ -8,7 +8,7 @@ function Article (options) {
 Article.articles = [];
 
 Article.prototype.toHtml = function(scriptTemplatId) {
-  this.daysAgo = parseInt((new Date() - new Date(this.dateStamp))/60/60/24/1000);
+  this.daysAgo = parseInt((new Date() - new Date(this.dateStamp)) / 60 / 60 / 24 / 1000);
   this.publishStatus = this.dateStamp ? 'Posted ' + this.daysAgo + ' days ago on' : '(draft)';
 
   var source = $(scriptTemplatId).html();
