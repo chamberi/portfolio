@@ -5,7 +5,8 @@
     "abstract": "Guessing Game",
     "repoUrl": "https://github.com/chamberi/about_me",
     "coders": "Colin Lamont",
-    "dateStamp": "2016-09-24"
+    "dateStamp": "2016-09-24",
+    "codeCount": 337
   },
   {
     "title": "Cookie Stand",
@@ -13,7 +14,8 @@
     "abstract": "Rendered lists of objects to the DOM, with ability to add or delete more.",
     "repoUrl": "https://github.com/chamberi/cookie-stand",
     "coders": "Colin Lamont",
-    "dateStamp": "2016-10-04"
+    "dateStamp": "2016-10-04",
+    "codeCount": 105
   },
   {
     "title": "Bus Mall",
@@ -21,7 +23,8 @@
     "abstract": "Randomly display pictures, count clicks, and display chart.",
     "repoUrl": "https://github.com/chamberi/bus-mall",
     "coders": "Colin Lamont",
-    "dateStamp": "2016-10-10"
+    "dateStamp": "2016-10-10",
+    "codeCount": 286
   },
   {
     "title": "Mars Mission",
@@ -29,6 +32,7 @@
     "abstract": "Game to survive being stuck on Mars.",
     "repoUrl": "https://github.com/abdih17/Mars-Mission",
     "coders": "Colin Lamont, Johnny, Hawa, Andrew",
-    "dateStamp": "2016-10-14"
+    "dateStamp": "2016-10-14",
+    "codeCount": 1751
   }
 ]
