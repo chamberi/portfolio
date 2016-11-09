@@ -36,6 +36,9 @@
       </nav>
     </header>
     <main>
+      <section id="articles" class="tab-content">
+        <h2>Javascript Projects</h2>
+      </section>
       <section id="about" class="tab-content">
         <article>
           <div class="about">
@@ -44,17 +47,30 @@
             <img src="imgs/profile.jpg"/>
           </div>
         </article>
+        <article id="repo">
+          <script id="repo-template" type="text/x-handlebars-template">
+            <li>
+              <a href="{{html_url}}" target="_blank"><h3>{{full_name}}</h3></a>
+              <p>Description: {{description}}</p>
+              <p>Primary Language: {{language}}</p>
+              <p>Created: {{created_at}}</p>
+              <p>Last updated: {{updated_at}}</p>
+              {{#if watchers}}
+              <p>{{watchers_count}} watching this repo</p>
+              {{/if}}
+            </li>
+          </script>
+        </article>
       </section>
-      <div id="articles" class="tab-content">
-        <h2>Javascript Projects</h2>
-      </div>
       <footer>
-        
       </footer>
     </main>
     <script src="scripts/controllers/page.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="vendor/githubToken.js"></script>
+    <script src="scripts/repo.js"></script>
+    <script src="scripts/repoView.js"></script>
     <script type="text/javascript" src="scripts/projects.js"></script>
     <script type="text/javascript" src="scripts/builder.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
