@@ -42,16 +42,20 @@ time {
   }
   .main-nav ul {
     display:block;
-    float:right;
+    /*float:right;*/
     margin-top: 70px;
   }
 
   .main-nav li {
     display:inline;
-    margin-left: 40px;
+    margin-left: 15px;
   }
 }
 
 .project-article {
   margin-bottom: 10px;
+}
+
+li {
+  text-decoration: none;
 }
