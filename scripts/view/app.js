@@ -7,6 +7,6 @@
     });
     $('footer').text('The total lines of code is: ' + Article.statsAll());
   };
-  Article.fetchAll();
   module.app = app;
+  Article.fetchAll();
 })(window);
