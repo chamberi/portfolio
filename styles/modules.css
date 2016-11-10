@@ -55,3 +55,7 @@ time {
 .project-article {
   margin-bottom: 10px;
 }
+
+a p {
+  clear: both;
+}
