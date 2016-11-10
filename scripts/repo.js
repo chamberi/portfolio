@@ -5,10 +5,10 @@
   repos.requestRepos = function(callback) {
     $.when(
     $.get('/github/users/chamberi/repos', function(data) {
-      reposObj.allRepos = data;
+      repos.allRepos = data;
     }),
     $.get('/github/users/chamberi/followers', function(data) {
-      reposObj.followers = data;
+      repos.followers = data;
     })
     ).done(callback);
   };
